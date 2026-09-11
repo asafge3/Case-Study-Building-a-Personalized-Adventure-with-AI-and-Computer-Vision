@@ -1,6 +1,9 @@
 # Mystic Mission: building a physical adventure game for 4 to 9 year olds
 
-A zero-to-one consumer product, taken from an idea to a playtested build and a
+Mystic Mission is a personal passion project I built to explore how AI can 
+change the way physical and digital products are created, tested, and brought to life.
+
+It's a zero-to-one consumer product, taken from an idea to a playtested build and a
 manufacturing decision by one person over about six weeks.
 
 Animated characters send children on a scavenger hunt around **their own house**.
