@@ -16,12 +16,12 @@ numbers said, and what I killed as a result.
 
 ## Why this exists
 
-I wanted a portfolio piece that showed judgement rather than output. Most of what
+I wanted a portfolio piece that showed judgement rather than output. Some of what
 follows is me being wrong in public and then measuring my way out of it, which is
 the honest shape of zero-to-one work and is usually the part that gets edited out
 of a case study.
 
-Four things I would want a hiring manager to take from it:
+Four things I would want the reader to take from it:
 
 1. **I run experiments that can kill my own ideas**, and several did.
 2. **I read my own results conservatively**, including one result that looked like
