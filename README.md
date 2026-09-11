@@ -39,8 +39,8 @@ Four things I would want the reader to take from it:
             │
             ▼
   ┌─────────────────────────────────────────────────┐
-  │  Character video   →   personalised comic       │
-  │  (fixed, generic)      (names, pet, real rooms) │
+  │  Scene video   →   personalised briefing       │
+  │  (AI Generated)    (names, pet, real rooms) │
   └─────────────────────────────────────────────────┘
             │
             ▼
