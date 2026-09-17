@@ -4,7 +4,7 @@ Mystic Mission is a personal passion project I built to explore how AI can
 change the way physical and digital products are created, tested, and brought to life.
 
 It's a zero-to-one consumer product, taken from an idea to a playtested build and a
-manufacturing decision by one person over about six weeks.
+manufacturing decision by one person over about six weeks, available on mysticsmission.com
 
 Animated characters send children on a scavenger hunt around **their own house**.
 The objects they find are collectible metal coins, identified by the family
