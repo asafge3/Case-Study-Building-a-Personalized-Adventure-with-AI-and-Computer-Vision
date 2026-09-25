@@ -1,6 +1,6 @@
 # Mystic Mission
 
-**An AI-personalized adventure game that turns a family's home into the game world.**
+**Case Study: Building an AI-Powered Personalized Adventure in the Real World.**
 
 Children ages 4–9 receive a physical kit, hunt for collectible medallions hidden around their home, scan them with a laptop or tablet camera, and cast spells with a light-tipped wand and their voices. Animated characters guide the adventure. The story uses the children's names, their pet, and the actual rooms in their house, and ends with a real treasure they can hold.
 
