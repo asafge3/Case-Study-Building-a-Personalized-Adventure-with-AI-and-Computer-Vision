@@ -1,6 +1,6 @@
 # Case Study: Building An AI-Powered Adventure in the Real World
 
-I have spent my career as a product leader building and launching new products. I started Mystic Mission as a passion project to do the whole thing myself: build the technology, put a physical product in children's hands, watch them use it, and change the design when the evidence demanded it.
+I have spent my career as a product leader building and launching new products. I started Mystic Mission as a passion project to do evaluate how AI can empower a Solo founder: build the technology, put a physical product in children's hands, watch them use it, and change the design when the evidence demanded it.
 
 I also wanted to explore what AI personalization, computer vision, and voice recognition could make possible in children's play, and how quickly I could build an experience that works across homes, laptops, and tablets. This case study shows how I work as both a Product Director and a hands-on builder, while testing what it would take to make the experience repeatable at scale.
 
