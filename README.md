@@ -1,17 +1,21 @@
-# Mystic Mission
+# Case Study: Building An AI-Powered Adventure in the Real World
 
-**Case Study: Building an AI-Powered Personalized Adventure in the Real World.**
+I have spent my career as a product leader building and launching new products. I started Mystic Mission as a passion project to do the whole thing myself: build the technology, put a physical product in children's hands, watch them use it, and change the design when the evidence demanded it.
+
+I also wanted to explore what AI personalization, computer vision, and voice recognition could make possible in children's play, and how quickly I could build an experience that works across homes, laptops, and tablets. This case study shows how I work as both a Product Director and a hands-on builder, while testing what it would take to make the experience repeatable at scale.
+
+**The idea:** an AI-personalized adventure game that turns a family's home into the game world.
 
 Children ages 4–9 receive a physical kit, hunt for collectible medallions hidden around their home, scan them with a laptop or tablet camera, and cast spells with a light-tipped wand and their voices. Animated characters guide the adventure. The story uses the children's names, their pet, and the actual rooms in their house, and ends with a real treasure they can hold.
 
-I took Mystic Mission from an idea to a playable, family-tested product and a physical kit in roughly two months. I designed the experience, built the prototype and test harnesses, ran the playtests, and made the hardware, platform, and manufacturing decisions.
+I took it from an idea to a playable, family-tested product and a physical kit in roughly two months. I designed the experience, built the prototype and test harnesses, ran the playtests, and made the hardware, platform, and manufacturing decisions. This case study follows the technical work and the product judgment behind it: what I measured, what failed with real children, and what I changed.
 
 **This repository documents the product decisions and evidence.** The application code, story content, and character IP are private.
 
 ## The experience
 
 1. A parent enters the players' names and the rooms available for hiding items, then hides the medallions and treasure.
-2. AI-generated comic panels weave those details xqinto the adventure. Recorded character videos supply the shared story and performances.
+2. AI-generated comic panels weave those details into the adventure. Recorded character videos supply the shared story and performances.
 3. Children search their real home and present each medallion to the camera to advance the story.
 4. They aim the wand at targets on screen and call out spell words. The adventure responds to what the camera and microphone detect.
 5. The final discovery is a physical object, not just an animation or a score.
@@ -20,25 +24,45 @@ The separation between recorded video and generated panels is a product constrai
 
 ## What makes it work
 
-| Layer | What I built and tested | Product job |
+### AI makes the story personal
 
-| **AI personalization** | A story flow that combines fixed animated scenes with generated comic panels using family-specific details | Make the adventure feel as though it was written for the children and their home without generating every scene as video |
-| **Computer vision for physical objects** | Printed ArUco markers on medallions, read by the device's built-in camera; a controlled vision test harness and real confirmation trials | Let a physical discovery trigger the next story beat without an NFC reader or other accessory |
-| **Computer vision for play** | Camera tracking of the wand's illuminated tip and on-screen target detection | Make spellcasting an active, visible skill rather than a button press |
-| **Voice recognition** | Spoken spell words incorporated into casting | Let children shout the magic while keeping the interaction forgiving when speech or movement is imperfect |
-| **Browser delivery** | A web experience designed for laptop and tablet play | Get families playing without asking them to install a native app |
+Recorded character scenes provide the shared story and performances. Generated comic panels bring in the children's names, their pet, and the rooms their parent actually chose. The two formats work together so the adventure feels specific to a family without generating every scene as video.
+
+### Computer vision connects the kit to the story
+
+The built-in camera reads printed ArUco markers on physical medallions and tracks the illuminated tip of the wand. Finding an object advances the story; aiming the wand at targets casts a spell. I built a controlled vision test harness alongside the gameplay tests.
+
+### Voice makes casting feel like magic
+
+Children call out spell words as they move the wand. The game has to accommodate the way children actually speak and move, including words shouted early and gestures that are close enough to the intended action.
+
+### The browser brings it onto family devices
+
+Parents can set up and play on a laptop or tablet without installing a native app. The physical kit provides the tactile part of the experience.
 
 The hard part was making these layers work for a child in a real home. A detector can perform beautifully on a captured frame while a five-year-old still struggles to hold a coin up, keep a wand in view, or say a word at the expected time. Those are product failures even when the underlying model or algorithm is correct.
 
 ## Decisions that changed the product
 
-| Decision | Evidence and consequence |
+### I removed the NFC reader
 
-| **Camera-read medallions instead of NFC** | Printed markers removed the USB reader from the kit and roughly a thousand lines of supporting code. I built a vision harness to test recognition before committing to the physical pieces. |
-| **Personalized panels alongside recorded video** | A fixed video cannot truthfully name each child or direct them to their actual kitchen. Moving those details into generated panels made the experience reusable across homes. |
-| **Targets instead of drawing runes in the air** | The older child completed 27 of 33 shape casts; the younger child had not completed one unaided. With target-based casting, children completed 32 of 34 casts across an adventure, including the younger child's first unaided spell. |
-| **Voice and movement that tolerate children's timing** | Children sometimes shout the word while moving the wand, sometimes before, and sometimes after. Casting needs to listen across the interaction and let a recognized word help a messy gesture succeed. |
-| **Browser first** | The kit already supplies the physical interaction. Browser delivery lets me test the whole parent setup and play flow on devices families have before investing in native apps. |
+Camera-read markers let a medallion trigger the next story beat without a USB accessory. That removed a hardware component from the kit and roughly a thousand lines of supporting code. The vision tests below helped me make the change before committing to the physical pieces.
+
+### I split personalization from the recorded scenes
+
+A fixed video cannot truthfully name each child or send them to their actual kitchen. An earlier version blurred this distinction and only worked in my home. Generated panels now carry those details, while the animated scenes retain their performance and production quality.
+
+### I replaced air-drawn runes with visible targets
+
+The older child completed 27 of 33 shape casts; the younger child had not completed one unaided. With target-based casting, children completed 32 of 34 casts across an adventure, including the younger child's first unaided spell.
+
+### I adjusted casting to children's timing
+
+Children shout a word before, during, or after moving the wand. The interaction needs to listen across the cast and let a recognized word help a messy gesture succeed.
+
+### I chose the browser for the first family tests
+
+It lets me test the entire parent setup and play flow on devices families already have. Whether a native app improves the experience is a later decision.
 
 ## The evidence, including its limits
 
